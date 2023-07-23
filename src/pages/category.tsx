@@ -30,9 +30,9 @@ const Popup = () => {
 }
 
 
-const category = () => {
+const Category = () => {
     
-    const [category, setCategory] = useState([{
+    const [Category, setCategory] = useState([{
         id:1, name : "과자", isCheck : false
     },{
         id:2, name : "라면", isCheck : false
@@ -41,7 +41,7 @@ const category = () => {
     },{
         id:4, name : "커피", isCheck : false
     }])
-    const [taste, setTaste] = useState([{
+    const [Taste, setTaste] = useState([{
         id:1, name : "단맛", isCheck : false
     },{
         id:2, name : "짠맛", isCheck : false
@@ -62,7 +62,7 @@ const category = () => {
     },{
         id:10, name : "촉촉한", isCheck : false
     }]) 
-    const [datas, setDatas] = useState([
+    const [Datas, setDatas] = useState([
         {id:1, description: "바삭한 감각과 고소한 맛을 선사하는 과자", name : "새우깡", taste:["짠맛","고소한","바삭한"], category:"과자"},
         {id:2, description: "고소한 맛이 특징인 간편한 과자", name : "깨소금", taste:["짠맛","고소한"], category:"과자"},
         {id:3, description: "짠맛이 돋보이는 과자", name : "소금", taste:["짠맛"], category:"과자"},
@@ -363,13 +363,13 @@ const category = () => {
           
           
     ])
-    const tasteList = (taste.reduce((a:any,v:any)=>{
+    const tasteList = (Taste.reduce((a:any,v:any)=>{
       if(v.isCheck){
             a.push(v.name);
         }
         return a;
     },[]));
-    const categoryList = (category.reduce((a,v)=>{
+    const categoryList = (Category.reduce((a,v)=>{
         if(v.isCheck){
             a = v.name;
         }
@@ -377,9 +377,7 @@ const category = () => {
     },""));
     useEffect(()=>{
 
-        console.log(categoryList)
-
-        setResult(datas.reduce((a:any,v:any)=>{
+        setResult(Datas.reduce((a:any,v:any)=>{
             let isTrue = false;
             if(tasteList.length === 0){
                 a.push(v);
@@ -402,20 +400,20 @@ const category = () => {
             }
             return a;
         },[]))
-    },[category, taste])
+    },[Category, Taste])
 
-    const [isPopup,setIsPopup] = useState(false);
-    const [currentId,setCurrentId] = useState(null);
+    const [IsPopup,setIsPopup] = useState(false);
+    const [CurrentId,setCurrentId] = useState(null);
 
-    const [result,setResult] = useState(datas)
+    const [Result,setResult] = useState(Datas)
     return (
         <div>
         <HeaderComponent/>
-            <div className={`${popupStyle.popup} ${isPopup ? "visible" : "none"}`} >
+            <div className={`${popupStyle.popup} ${IsPopup ? "visible" : "none"}`} >
                 {
-                    datas.map((ele)=>{
-                        if(ele.id === currentId){
-                            return <div style={{display:"flex", width:"100%", justifyItems:"center", alignItems:"center", height:"calc(100% - 60px)"}}>
+                    Datas.map((ele:any,idx:any)=>{
+                        if(ele.id === CurrentId){
+                            return <div key={idx} style={{display:"flex", width:"100%", justifyItems:"center", alignItems:"center", height:"calc(100% - 60px)"}}>
                             <div style={{width:"100%", textAlign:"center", backgroundColor:"#fff"}}>
                                 <div>
                                     <img src="https://placehold.co/100x100" style={{width:"100%"}}/>
@@ -444,9 +442,9 @@ const category = () => {
             <div className={testStyle.test} style={{marginTop:"51px", borderTop:"1px solid #000"}}>
                 <h2 style={{fontWeight:"bold"}}>장르 카테고리</h2>
                 <ul>
-                    {category.map(({id,name,isCheck})=>(<li key={id} className={isCheck ? "checked" : ""} onClick={()=>{
+                    {Category.map(({id,name,isCheck})=>(<li key={id} className={isCheck ? "checked" : ""} onClick={()=>{
                         alert("현재 지원하지 않는 기능입니다.");
-                        setCategory(category.map(ele => {
+                        setCategory(Category.map(ele => {
                             if(ele.id === id){
                                 ele.isCheck = !ele.isCheck
                             }
@@ -457,8 +455,8 @@ const category = () => {
                 </ul>
                 <h2 style={{fontWeight:"bold"}}>맛 카테고리</h2>
                 <ul>
-                    {taste.map(({id,name,isCheck})=>(<li key={id} className={isCheck ? "checked" : ""} onClick={()=>{
-                        setTaste(taste.map(ele => {
+                    {Taste.map(({id,name,isCheck})=>(<li key={id} className={isCheck ? "checked" : ""} onClick={()=>{
+                        setTaste(Taste.map(ele => {
                             if(ele.id === id){
                                 ele.isCheck = !ele.isCheck
                             }
@@ -475,10 +473,10 @@ const category = () => {
                     </>:<></>}
                 <ul>
                     {
-                    (result.length === 0)?
+                    (Result.length === 0)?
                          <div className="not-found"> 결과 없음 </div>
                     :
-                         result.map((ele:any)=> <li>
+                         Result.map((ele:any,idx:any)=> <li key={idx}>
                             <div className={listStyle.list} onClick={()=>{ 
                                     setIsPopup(true);
                                     setCurrentId(ele.id);
@@ -503,4 +501,4 @@ const category = () => {
     )
 }
 
-export default category;
+export default Category;
