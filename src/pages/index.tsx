@@ -23,7 +23,7 @@ export default function Home() {
         <MiniBannerComponent Content={"SECHIHYEO"} Align={"right"}/>
           <BannerComponent 
           Title={"원하는 맛을 찾아보세요"}
-          Text={"뜨거운 날씨와 여름 비 소식으로 가늠할 수 없다면 주목하세요. 다양한 아이템을 최대 88% 할인율로 준비했습니다. 시원한 쇼핑을 위한 12% 쿠폰도 놓치지 마세요."}
+          Text={"새로운 경험과 향연을 원하는 맛을 찾아보세요! 다양한 맛으로 여러분을 매료시킬 준비가 되어 있습니다. 우리와 함께 특별한 맛의 세계로 떠나보세요!"}
           Content={<div className={customStyle.custom2} >
             <p>WELECOME TO</p>
             <h2>15%</h2>
