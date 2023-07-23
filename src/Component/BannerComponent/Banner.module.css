@@ -1,5 +1,5 @@
 .banner{ position:relative; display: flex; flex-direction: column; margin-left: auto;width: calc(100% - 40px); height: 400px;}
-.banner > div{ height: 300px;}
+.banner > div{ height: 300px; background-repeat: no-repeat;}
 .banner > h2{ font-size: 24px; font-weight: bold; margin-top: 7px; margin-bottom: 7px;}
 .banner > p{line-height: 21px; letter-spacing: -0.5px;}
 .banner > div:last-child{display:block; width:30px; height:5px; background-color: black; position: absolute; top: 270px; left: -15px;}
