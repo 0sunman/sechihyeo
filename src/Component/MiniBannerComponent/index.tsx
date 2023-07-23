@@ -1,5 +1,5 @@
 import MiniBannerStyle from "./MiniBanner.module.css"
-const MiniBannerComponent = ({Content,isArrow,Align}) =>{
+const MiniBannerComponent = ({Content,isArrow,Align}:any) =>{
     return (<div className={MiniBannerStyle.banner}>
         {Align === "right" ? (
             <h2 style={{marginLeft:"auto", marginRight:"25px"}}>{Content}</h2>
