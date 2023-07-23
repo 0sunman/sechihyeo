@@ -1,0 +1,6 @@
+.test{
+    background-color: white;
+}
+.test h2{padding: 15px 5px; text-align: center;}
+.test ul{ display: flex; flex-direction: row; flex-wrap: wrap; width: 100%; border: 1px solid #000; border-left:0px; border-right: 0px;}
+.test ul > li{ width: 50%; padding: 10px 0px; text-align: center; }

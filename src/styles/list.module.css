@@ -1,0 +1,6 @@
+.list{display: flex;}
+.list:nth-child(1){padding:10px 10px 0px;}
+.list > ul{ display: flex; flex-direction: column; justify-content: center; padding-left:10px; width: 100%; }
+.list > ul > li{text-align: left;}
+.list > ul > li:nth-child(1){font-size: 17px; font-weight: bold;}
+.list > ul > li:nth-child(2){font-size: 13px; padding-top:5px; text-overflow: ellipsis; overflow: hidden; }

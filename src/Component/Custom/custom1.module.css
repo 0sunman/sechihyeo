@@ -1,0 +1,11 @@
+.custom1{display: flex; height:300px; flex-direction: column; align-items: center; justify-content: center; background-color: red;}
+.custom1 > *{margin-bottom: 15px; color:white}
+.custom1 span{ letter-spacing: 5px;}
+.custom1 h2{font-size:50px;}
+.custom1 p{ letter-spacing: 5px;}
+
+.custom2{display: flex; height:300px; flex-direction: column; align-items: center; justify-content: center; background-color: blueviolet;}
+.custom2 > *{margin-bottom: 15px; color:white}
+.custom2 span{ letter-spacing: 5px;}
+.custom2 h2{font-size:50px;}
+.custom2 p{ letter-spacing: 5px;}
