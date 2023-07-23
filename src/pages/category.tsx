@@ -363,8 +363,8 @@ const category = () => {
           
           
     ])
-    const tasteList = (taste.reduce((a,v)=>{
-        if(v.isCheck){
+    const tasteList = (taste.reduce((a:any,v:any)=>{
+      if(v.isCheck){
             a.push(v.name);
         }
         return a;
@@ -379,7 +379,7 @@ const category = () => {
 
         console.log(categoryList)
 
-        setResult(datas.reduce((a,v)=>{
+        setResult(datas.reduce((a:any,v:any)=>{
             let isTrue = false;
             if(tasteList.length === 0){
                 a.push(v);
@@ -478,7 +478,7 @@ const category = () => {
                     (result.length === 0)?
                          <div className="not-found"> 결과 없음 </div>
                     :
-                         result.map((ele)=> <li>
+                         result.map((ele:any)=> <li>
                             <div className={listStyle.list} onClick={()=>{ 
                                     setIsPopup(true);
                                     setCurrentId(ele.id);
