@@ -7,7 +7,7 @@ const BottomComponent = () => {
             <li>
                 <Link href="./">
                     <span className="material-symbols-outlined ">home</span><br/>
-                    Home
+                    HOME
                 </Link>
             </li>
             <li>
@@ -15,7 +15,7 @@ const BottomComponent = () => {
                     <span className="material-symbols-outlined">
                     fastfood
                     </span><br/>
-                    Taste
+                    TASTE
                 </Link>
             </li>
             <li>
@@ -23,7 +23,7 @@ const BottomComponent = () => {
                     <span className="material-symbols-outlined">
                     person
                     </span><br/>
-                    My
+                    MY
                 </Link>
             </li>
         </ul>
