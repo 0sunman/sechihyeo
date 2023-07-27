@@ -11,11 +11,19 @@ const BottomComponent = () => {
                 </Link>
             </li>
             <li>
-                <Link href="./category">
+                <Link href="./categoryProto1">
                     <span className="material-symbols-outlined">
-                    fastfood
+                    smart_toy
                     </span><br/>
-                    TASTE
+                    PROTO1
+                </Link>
+            </li>
+            <li>
+                <Link href="./categoryProto2">
+                    <span className="material-symbols-outlined">
+                    robot
+                    </span><br/>
+                    PROTO2
                 </Link>
             </li>
             <li>
