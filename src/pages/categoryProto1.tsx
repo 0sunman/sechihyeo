@@ -37,9 +37,7 @@ const Category = () => {
     },{
         id:2, name : "라면", isCheck : false
     },{
-        id:3, name : "위스키", isCheck : false
-    },{
-        id:4, name : "커피", isCheck : false
+        id:3, name : "커피", isCheck : false
     }])
     const [Taste, setTaste] = useState([{
         id:1, name : "단맛", isCheck : false
@@ -62,9 +60,6 @@ const Category = () => {
     },{
         id:10, name : "촉촉한", isCheck : false
     }]) 
-    /*
-    
-    */
     const [Category2,setCategory2]= useState([{
       id:1, name : "일반", isCheck : false
   },{
@@ -72,10 +67,53 @@ const Category = () => {
   },{
       id:3, name : "사탕/젤리", isCheck : false
   }])
+
+  /*
+    1. (긍정) 전자혀를 구해서 측정기준을 정한다
+    2. (현실) 상세페이지는 최소화시키고 (판매자에게 모든 권한 위임) / 프로모션에 사활을 건다
+    3. (막장) 품질법규팀을 무시한다.
+  */
+  /*
+    딱딱
+    퍽퍽
+    촉촉
+    물렁물렁
+    쫄깃쫄깃  
+    바삭바삭
+    부드러움
+    말랑말랑
+    탱글탱글
+    쫀득쫀득
+    아삭아삭
+    보슬보슬
+    꼬들꼬들
+  */
+
     const [Datas, setDatas] = useState([
-        {id:1, description: "바삭한 감각과 고소한 맛을 선사하는 과자", name : "새우깡", taste:["짠맛","고소한","바삭한"], category:"과자",category2:"일반"},
-        {id:2, description: "고소한 맛이 특징인 간편한 과자", name : "깨소금과자", taste:["짠맛","고소한"], category:"과자",category2:"일반"},
-        {id:3, description: "짠맛이 돋보이는 과자", name : "소금과자", taste:["짠맛"], category:"과자",category2:"일반"},
+        {
+          id:1, 
+          description: "바삭한 감각과 고소한 맛을 선사하는 과자", 
+          name : "새우깡", 
+          taste:["짠맛","고소한","바삭한"], 
+          category:"과자",
+          category2:"일반"
+        },
+        {
+          id:2, 
+          description: "고소한 맛이 특징인 간편한 과자", 
+          name : "깨소금과자", 
+          taste:["짠맛","고소한"], 
+          category:"과자",
+          category2:"일반"
+        },
+        {
+          id:3, 
+          description: "짠맛이 돋보이는 과자", 
+          name : "소금과자", 
+          taste:["짠맛"], 
+          category:"과자",
+          category2:"일반"
+        },
         {id:4, description: "독특한 텍스처와 풍부한 맛을 지닌 과자", name : "먹태깡", taste:["짠맛","텁텁한"], category:"과자",category2:"일반"},
         {id:5, description: "다양한 맛을 즐길 수 있는 유쾌한 젤리", name : "하리보", taste:["단맛","신맛"], category:"과자",category2:"젤리/사탕"},
         {id:6, description: "달콤함과 특별한 맛을 선사하는 과자", name : "달고나", taste:["단맛","쓴맛"], category:"과자",category2:"젤리/사탕"},
@@ -88,291 +126,161 @@ const Category = () => {
             "description": "담백하고 바삭한 맛이 특징인 과자",
             "name": "카라멜콘",
             "taste": ["바삭한", "담백한"],
-            "category": "과자",category2:"일반"
-            
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 12,
             "description": "달콤하고 고소한 맛이 일품인 과자",
             "name": "코코볼",
             "taste": ["단맛", "고소한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 13,
             "description": "신선한 과일 향과 맛을 갖춘 과자",
             "name": "과일칩",
             "taste": ["과일"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 14,
             "description": "바삭하고 짭짤한 맛이 일품인 과자",
             "name": "스낵과자",
             "taste": ["짠맛", "바삭한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 15,
             "description": "고소한 크래커에 초콜릿을 코팅한 과자",
             "name": "초콜릿 크래커",
             "taste": ["고소한", "초콜릿"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 16,
             "description": "달콤하고 바삭한 식감의 스낵",
             "name": "허니버터칩",
             "taste": ["단맛", "바삭한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 17,
             "description": "고소하고 촉촉한 맛이 일품인 과자",
             "name": "마늘깡",
             "taste": ["고소한", "촉촉한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 18,
             "description": "달콤한 맛과 고소한 식감이 일품인 과자",
             "name": "프레첼",
             "taste": ["단맛", "고소한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 19,
             "description": "고소하고 바삭한 식감의 과자",
             "name": "감자깡",
             "taste": ["고소한", "바삭한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 20,
             "description": "달콤하고 고소한 맛이 일품인 과자",
             "name": "오징어땅콩",
             "taste": ["단맛","짠맛", "고소한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 21,
             "description": "상큼한 과일 향과 맛을 갖춘 과자",
             "name": "과일젤리",
             "taste": ["단맛", "신맛"],
-            "category": "과자",category2:"사탕/젤리"
+            "category": "과자",
+            "category2":"사탕/젤리"
           },
           {
             "id": 22,
             "description": "짭짤한 감칠맛과 바삭한 식감이 일품인 과자",
             "name": "치토스",
             "taste": ["짠맛", "바삭한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 23,
             "description": "달콤하고 부드러운 식감이 일품인 과자",
             "name": "소프트쿠키",
             "taste": ["단맛", "부드러운"],
-            "category": "과자",category2:"빵/디저트"
+            "category": "과자",
+            "category2":"빵/디저트"
           },
           {
             "id": 24,
             "description": "바삭하고 고소한 식감의 과자",
             "name": "프레즐",
             "taste": ["바삭한", "고소한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 25,
             "description": "담백하고 고소한 맛이 일품인 과자",
             "name": "김밥깡",
             "taste": ["고소한", "담백한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 26,
             "description": "짭짤하고 바삭한 식감이 특징인 과자",
             "name": "맛동산",
             "taste": ["짠맛", "바삭한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 27,
             "description": "달콤하고 고소한 식감의 스낵",
             "name": "아몬드슬라이스",
             "taste": ["단맛", "고소한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 28,
             "description": "상큼하고 달콤한 맛이 일품인 과자",
             "name": "레몬쿠키",
             "taste": ["단맛", "신맛"],
-            "category": "과자",category2:"빵/디저트"
+            "category": "과자",
+            "category2":"빵/디저트"
           },
           {
             "id": 29,
             "description": "바삭하고 고소한 식감의 과자",
             "name": "땅콩과자",
             "taste": ["고소한", "바삭한"],
-            "category": "과자",category2:"일반"
+            "category": "과자",
+            "category2":"일반"
           },
           {
             "id": 30,
             "description": "달콤한 맛과 고소한 식감이 일품인 과자",
             "name": "치즈스틱",
             "taste": ["단맛", "고소한"],
-            "category": "과자",category2:"일반"
-          },
-            {
-              "id": 30,
-              "description": "리그베릿 12년",
-              "name": "Lagavulin 12 Year Old",
-              "taste": ["짠맛", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 31,
-              "description": "아르베클라 10년",
-              "name": "Ardbeg 10 Year Old",
-              "taste": ["신맛", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 32,
-              "description": "글렌피딕 18년",
-              "name": "Glenfiddich 18 Year Old",
-              "taste": ["고소한", "부드러운"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 33,
-              "description": "맥날트 15년 트리플 캐스크",
-              "name": "Macallan 15 Year Old Triple Cask",
-              "taste": ["부드러운", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 34,
-              "description": "라플로이그 10년",
-              "name": "Laphroaig 10 Year Old",
-              "taste": ["짠맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 35,
-              "description": "하이랜더 12년",
-              "name": "Highlander 12 Year Old",
-              "taste": ["고소한", "부드러운"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 36,
-              "description": "토마틴 15년",
-              "name": "Tomatin 15 Year Old",
-              "taste": ["고소한", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 37,
-              "description": "바울타인 라쉬니스 18년",
-              "name": "Balvenie Laphroaig 18 Year Old",
-              "taste": ["짠맛", "부드러운"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 38,
-              "description": "로열로한 라라스 12년",
-              "name": "Royal Lochnagar 12 Year Old",
-              "taste": ["깔끔한", "신맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 39,
-              "description": "글렌들라치 12년",
-              "name": "GlenDronach 12 Year Old",
-              "taste": ["고소한", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 40,
-              "description": "라그무어 16년",
-              "name": "Lagavulin 16 Year Old",
-              "taste": ["짠맛", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 41,
-              "description": "아발라워 12년",
-              "name": "Aberlour 12 Year Old",
-              "taste": ["신맛", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 42,
-              "description": "글렌모랑지 18년",
-              "name": "Glenmorangie 18 Year Old",
-              "taste": ["고소한", "부드러운"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 43,
-              "description": "매콬 12년",
-              "name": "Macallan 12 Year Old",
-              "taste": ["부드러운", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 44,
-              "description": "라플로이그 쿼터캐스크",
-              "name": "Laphroaig Quarter Cask",
-              "taste": ["짠맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 45,
-              "description": "하이랜더 15년",
-              "name": "Highlander 15 Year Old",
-              "taste": ["고소한", "부드러운"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 46,
-              "description": "토마틴 18년",
-              "name": "Tomatin 18 Year Old",
-              "taste": ["고소한", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 47,
-              "description": "바울타인 라쉬니스 21년",
-              "name": "Balvenie Laphroaig 21 Year Old",
-              "taste": ["짠맛", "부드러운"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 48,
-              "description": "로열로한 라라스 16년",
-              "name": "Royal Lochnagar 16 Year Old",
-              "taste": ["신맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 49,
-              "description": "글렌들라치 15년",
-              "name": "GlenDronach 15 Year Old",
-              "taste": ["고소한", "단맛"],
-              "category": "위스키",category2:"일반"
-            },
-            {
-              "id": 50,
-              "description": "라그무어 18년",
-              "name": "Lagavulin 18 Year Old",
-              "taste": ["짠맛", "단맛"],
-              "category": "위스키",category2:"일반"
-            }
-          
-          
+            "category": "과자",
+            "category2":"일반"
+          }          
     ])
     const tasteList = (Taste.reduce((a:any,v:any)=>{
       if(v.isCheck){
