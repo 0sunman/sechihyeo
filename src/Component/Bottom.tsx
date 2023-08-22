@@ -10,20 +10,20 @@ const BottomComponent = () => {
                     HOME
                 </Link>
             </li>
-            <li>
+            {/* <li>
                 <Link href="./categoryProto1">
                     <span className="material-symbols-outlined">
                     smart_toy
                     </span><br/>
                     PROTO1
                 </Link>
-            </li>
+            </li> */}
             <li>
                 <Link href="./categoryProto2">
                     <span className="material-symbols-outlined">
                     robot
                     </span><br/>
-                    PROTO2
+                    CATEGORY
                 </Link>
             </li>
             <li>

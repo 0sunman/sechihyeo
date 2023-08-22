@@ -30,7 +30,7 @@ export default function Home() {
             <span>SECHIHYEO</span>
           </div>}/>
           <BannerComponent
-            imgUrl={"url(//img.cjthemarket.com/images/file/product/160/20210625174933839.png?SF=webp&RS=500x500)"}
+            imgUrl={"url(/image/main/11.png)"}
             Title={"황금색 감자튀김의 맛있는 유혹"}
             Text={"바삭한 겉은 입안에서 살살 녹아내리고, 부드럽고 달콤한 감자 속은 어느새 두 번 다시 찾게 될 맛있는 유혹으로 여러분을 초대합니다."}
             />
@@ -44,7 +44,7 @@ export default function Home() {
             <p>SUMMER VACANCE</p>
           </div>}/>
           <BannerComponent
-            imgUrl={"url(//img.cjthemarket.com/images/file/product/560/20221228152644244.jpg?SF=webp&RS=500x500)"}
+            imgUrl={"url(/image/main/13.jpg)"}
             Title={"입맛을 사로잡는 떡볶이"}
             Text={"입안 가득 퍼지는 풍부한 양념의 균형과 쫄깃한 떡의 신선함이 만났을 때, 특별한 순간을 위한 특별한 맛, 지금 경험해보세요!"}
             />
